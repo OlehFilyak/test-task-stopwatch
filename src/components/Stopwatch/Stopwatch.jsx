@@ -15,7 +15,12 @@ function Stopwatch() {
     }, 1000);
   };
 
-  const handleStop = () => {};
+  const handleStop = () => {
+    clearInterval(countRef.current);
+    setIsActive(false);
+    setIsPaused(true);
+    setTimer(0);
+  };
 
   const handlePause = () => {};
 
