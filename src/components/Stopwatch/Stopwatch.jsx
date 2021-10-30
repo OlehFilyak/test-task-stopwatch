@@ -8,20 +8,18 @@ function Stopwatch() {
   const countRef = useRef(null);
 
   const handleStart = () => {
-    // start button logic here
+    setIsActive(true);
+    setIsPaused(true);
+    countRef.current = setInterval(() => {
+      setTimer((timer) => timer + 1);
+    }, 1000);
   };
 
-  const handleStop = () => {
-    // Resume button logic here
-  };
+  const handleStop = () => {};
 
-  const handlePause = () => {
-    // Pause button logic here
-  };
+  const handlePause = () => {};
 
-  const handleReset = () => {
-    // Reset button logic here
-  };
+  const handleReset = () => {};
 
   return (
     <div className="app">
